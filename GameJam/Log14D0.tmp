@@ -1,0 +1,153 @@
+[gd_scene load_steps=6 format=3 uid="uid://c7uta6fhbmqkh"]
+
+[ext_resource type="Script" path="res://Login.gd" id="1_avubc"]
+
+[sub_resource type="Animation" id="Animation_ap2x5"]
+resource_name = "tips_fade_out"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Tips:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_f2w5a"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Tips:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_eclo2"]
+resource_name = "tips_fade_in"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Tips:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lrnqr"]
+_data = {
+"RESET": SubResource("Animation_f2w5a"),
+"tips_fade_in": SubResource("Animation_eclo2"),
+"tips_fade_out": SubResource("Animation_ap2x5")
+}
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_avubc")
+
+[node name="UserName" type="Label" parent="."]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 37.0
+offset_right = 93.0
+offset_bottom = 60.0
+text = "账号名："
+
+[node name="TextEdit" type="LineEdit" parent="UserName"]
+layout_mode = 0
+offset_left = 59.0
+offset_top = -6.0
+offset_right = 242.0
+offset_bottom = 29.0
+placeholder_text = "_输入用户名"
+max_length = 20
+context_menu_enabled = false
+clear_button_enabled = true
+drag_and_drop_selection_enabled = false
+caret_blink = true
+
+[node name="Password" type="Label" parent="."]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 87.0
+offset_right = 94.0
+offset_bottom = 110.0
+text = "密码："
+
+[node name="TextEdit2" type="LineEdit" parent="Password"]
+layout_mode = 0
+offset_left = 59.0
+offset_top = -5.0
+offset_right = 242.0
+offset_bottom = 30.0
+placeholder_text = "_输入密码"
+max_length = 10
+context_menu_enabled = false
+clear_button_enabled = true
+shortcut_keys_enabled = false
+drag_and_drop_selection_enabled = false
+caret_blink = true
+secret = true
+
+[node name="CheckButton" type="CheckButton" parent="Password"]
+layout_mode = 0
+offset_left = 251.0
+offset_right = 295.0
+offset_bottom = 24.0
+
+[node name="Confirm" type="Button" parent="."]
+layout_mode = 0
+offset_left = 227.0
+offset_top = 157.0
+offset_right = 267.0
+offset_bottom = 188.0
+text = "确认"
+
+[node name="Cancel" type="Button" parent="."]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 155.0
+offset_right = 120.0
+offset_bottom = 186.0
+text = "取消"
+
+[node name="Tips" type="Label" parent="."]
+layout_mode = 0
+offset_left = 183.0
+offset_top = 131.0
+offset_right = 311.0
+offset_bottom = 154.0
+text = "密码或账号名为空"
+
+[node name="TipsTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_lrnqr")
+}
+
+[connection signal="pressed" from="Password/CheckButton" to="." method="_on_check_button_pressed"]
+[connection signal="pressed" from="Confirm" to="." method="_on_confirm_pressed"]
+[connection signal="pressed" from="Cancel" to="." method="_on_cancel_pressed"]
+[connection signal="timeout" from="TipsTimer" to="." method="_on_tips_timer_timeout"]

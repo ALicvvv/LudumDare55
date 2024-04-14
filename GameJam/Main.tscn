@@ -1,0 +1,347 @@
+[gd_scene load_steps=38 format=3 uid="uid://35ra35k7awd0"]
+
+[ext_resource type="Script" path="res://Main.gd" id="1_7eshk"]
+[ext_resource type="Texture2D" uid="uid://bti2ox3gl6t6s" path="res://插画2.png" id="1_c1laa"]
+[ext_resource type="Texture2D" uid="uid://iudr1grtmgro" path="res://Necromancer_creativekind-Sheet.png" id="2_gb2wn"]
+[ext_resource type="PackedScene" uid="uid://c7uta6fhbmqkh" path="res://Login.tscn" id="3_bordl"]
+[ext_resource type="FontFile" uid="uid://dvcuh6hwul41a" path="res://DinkieBitmap-9pxDemo.ttf" id="4_kg2k7"]
+[ext_resource type="Texture2D" uid="uid://bhwxo346o8yhu" path="res://tileMap/Meow_Knight-Sheet.png" id="4_lkjyg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5aofj"]
+atlas = ExtResource("2_gb2wn")
+region = Rect2(0, 256, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oe75n"]
+atlas = ExtResource("2_gb2wn")
+region = Rect2(160, 256, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_osm4b"]
+atlas = ExtResource("2_gb2wn")
+region = Rect2(320, 256, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4xbds"]
+atlas = ExtResource("2_gb2wn")
+region = Rect2(480, 256, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wovpp"]
+atlas = ExtResource("2_gb2wn")
+region = Rect2(640, 256, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f04d5"]
+atlas = ExtResource("2_gb2wn")
+region = Rect2(800, 256, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pjoh5"]
+atlas = ExtResource("2_gb2wn")
+region = Rect2(960, 256, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5valh"]
+atlas = ExtResource("2_gb2wn")
+region = Rect2(1120, 256, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ae2xf"]
+atlas = ExtResource("2_gb2wn")
+region = Rect2(1280, 256, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kksfw"]
+atlas = ExtResource("2_gb2wn")
+region = Rect2(1440, 256, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ao21"]
+atlas = ExtResource("2_gb2wn")
+region = Rect2(1600, 256, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gvq3t"]
+atlas = ExtResource("2_gb2wn")
+region = Rect2(1760, 256, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_doiww"]
+atlas = ExtResource("2_gb2wn")
+region = Rect2(1920, 256, 160, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hqnwi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5aofj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oe75n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_osm4b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4xbds")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wovpp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f04d5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pjoh5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5valh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ae2xf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kksfw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ao21")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gvq3t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_doiww")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x5k5r"]
+atlas = ExtResource("2_gb2wn")
+region = Rect2(0, 768, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1knoh"]
+atlas = ExtResource("2_gb2wn")
+region = Rect2(160, 768, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8n0rb"]
+atlas = ExtResource("2_gb2wn")
+region = Rect2(320, 768, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jfgx7"]
+atlas = ExtResource("2_gb2wn")
+region = Rect2(480, 768, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ir8m"]
+atlas = ExtResource("2_gb2wn")
+region = Rect2(640, 768, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tupm5"]
+atlas = ExtResource("2_gb2wn")
+region = Rect2(800, 768, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6f5m6"]
+atlas = ExtResource("2_gb2wn")
+region = Rect2(960, 768, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4g4qv"]
+atlas = ExtResource("2_gb2wn")
+region = Rect2(1120, 768, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j7ngw"]
+atlas = ExtResource("2_gb2wn")
+region = Rect2(1280, 768, 160, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gddcl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x5k5r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1knoh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8n0rb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jfgx7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ir8m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tupm5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6f5m6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4g4qv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j7ngw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mbh3s"]
+atlas = ExtResource("4_lkjyg")
+region = Rect2(0, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6yhyn"]
+atlas = ExtResource("4_lkjyg")
+region = Rect2(80, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ydbyc"]
+atlas = ExtResource("4_lkjyg")
+region = Rect2(160, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0uhry"]
+atlas = ExtResource("4_lkjyg")
+region = Rect2(240, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rim6b"]
+atlas = ExtResource("4_lkjyg")
+region = Rect2(320, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_514pa"]
+atlas = ExtResource("4_lkjyg")
+region = Rect2(400, 0, 80, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d338b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mbh3s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6yhyn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ydbyc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0uhry")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rim6b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_514pa")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -209.0
+offset_top = -44.0
+offset_right = -209.0
+offset_bottom = -44.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7eshk")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="Main" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="插画2" type="Sprite2D" parent="Main"]
+position = Vector2(395, 114)
+scale = Vector2(0.127202, 0.127202)
+texture = ExtResource("1_c1laa")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Main"]
+position = Vector2(277, 173)
+sprite_frames = SubResource("SpriteFrames_hqnwi")
+autoplay = "default"
+frame_progress = 0.951066
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Main"]
+modulate = Color(1, 0, 1, 1)
+position = Vector2(332, 189)
+rotation = 3.14159
+scale = Vector2(1, -1)
+sprite_frames = SubResource("SpriteFrames_gddcl")
+autoplay = "default"
+frame_progress = 0.63192
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="Main"]
+position = Vector2(248, 162)
+rotation = 3.14159
+scale = Vector2(-0.908, -0.908)
+sprite_frames = SubResource("SpriteFrames_d338b")
+autoplay = "default"
+
+[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="Main"]
+position = Vector2(255, 197)
+rotation = 3.14159
+scale = Vector2(-0.908, -0.908)
+sprite_frames = SubResource("SpriteFrames_d338b")
+autoplay = "default"
+
+[node name="AnimatedSprite2D5" type="AnimatedSprite2D" parent="Main"]
+position = Vector2(267, 152)
+rotation = 3.14159
+scale = Vector2(-0.908, -0.908)
+sprite_frames = SubResource("SpriteFrames_d338b")
+autoplay = "default"
+
+[node name="AnimatedSprite2D6" type="AnimatedSprite2D" parent="Main"]
+position = Vector2(243, 182)
+rotation = 3.14159
+scale = Vector2(-0.908, -0.908)
+sprite_frames = SubResource("SpriteFrames_d338b")
+autoplay = "default"
+
+[node name="AnimatedSprite2D7" type="AnimatedSprite2D" parent="Main"]
+position = Vector2(230, 167)
+rotation = 3.14159
+scale = Vector2(-0.908, -0.908)
+sprite_frames = SubResource("SpriteFrames_d338b")
+autoplay = "default"
+
+[node name="AnimatedSprite2D8" type="AnimatedSprite2D" parent="Main"]
+position = Vector2(229, 196)
+rotation = 3.14159
+scale = Vector2(-0.908, -0.908)
+sprite_frames = SubResource("SpriteFrames_d338b")
+autoplay = "default"
+
+[node name="AnimatedSprite2D9" type="AnimatedSprite2D" parent="Main"]
+position = Vector2(239, 144)
+rotation = 3.14159
+scale = Vector2(-0.908, -0.908)
+sprite_frames = SubResource("SpriteFrames_d338b")
+autoplay = "default"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Main"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.547
+anchor_top = 0.204
+anchor_right = 1.547
+anchor_bottom = 1.204
+offset_left = 384.12
+offset_top = 164.84
+offset_right = 432.12
+offset_bottom = 155.84
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="Main/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_kg2k7")
+text = "召唤师登入"
+
+[node name="Login" parent="." instance=ExtResource("3_bordl")]
+layout_mode = 1
+offset_left = 210.0
+offset_top = 44.0
+offset_right = 210.0
+offset_bottom = 44.0
+
+[connection signal="pressed" from="Main/VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="login_finish" from="Login" to="." method="_on_login_login_finish"]
+[connection signal="visibility_changed" from="Login" to="." method="_on_login_visibility_changed"]

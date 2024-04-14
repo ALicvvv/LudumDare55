@@ -1,0 +1,36 @@
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://cpirkxys4qmoe"]
+
+[ext_resource type="Texture2D" uid="uid://cjupt1wx4me5q" path="res://Spritesheet_UI_Flat.png" id="1_8m1mp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m4vx0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_21tfl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qgrr0"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gjjxa"]
+texture = ExtResource("1_8m1mp")
+texture_margin_top = 0.945914
+texture_margin_bottom = 1.08104
+region_rect = Rect2(480.75, 170, 30.4064, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lcm2e"]
+atlas = ExtResource("1_8m1mp")
+region = Rect2(620, 203, 7, 7)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_25rtb"]
+texture = ExtResource("1_8m1mp")
+texture_margin_left = 0.675653
+texture_margin_top = 1.08104
+texture_margin_right = 0.945914
+texture_margin_bottom = 0.810783
+region_rect = Rect2(544.453, 44, 31.5465, 7.70161)
+
+[resource]
+Button/styles/focus = SubResource("StyleBoxEmpty_m4vx0")
+Button/styles/hover = SubResource("StyleBoxEmpty_21tfl")
+Button/styles/normal = SubResource("StyleBoxEmpty_qgrr0")
+Label/styles/normal = SubResource("StyleBoxTexture_gjjxa")
+LineEdit/colors/font_color = Color(0, 0, 0, 1)
+LineEdit/icons/clear = SubResource("AtlasTexture_lcm2e")
+LineEdit/styles/normal = SubResource("StyleBoxTexture_25rtb")

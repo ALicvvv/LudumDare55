@@ -1,0 +1,189 @@
+[gd_scene load_steps=11 format=3 uid="uid://c7uta6fhbmqkh"]
+
+[ext_resource type="Script" path="res://Login.gd" id="1_avubc"]
+[ext_resource type="Theme" uid="uid://cpirkxys4qmoe" path="res://Login.tres" id="2_5vtul"]
+[ext_resource type="Texture2D" uid="uid://cjupt1wx4me5q" path="res://Spritesheet_UI_Flat.png" id="2_65qn7"]
+[ext_resource type="FontFile" uid="uid://dvcuh6hwul41a" path="res://DinkieBitmap-9pxDemo.ttf" id="3_r7kry"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rhrol"]
+atlas = ExtResource("2_65qn7")
+region = Rect2(552, 200, 15, 15)
+
+[sub_resource type="LabelSettings" id="LabelSettings_c3eew"]
+outline_size = 5
+outline_color = Color(0.0117647, 0.0156863, 0, 1)
+
+[sub_resource type="Animation" id="Animation_f2w5a"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Tips:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_eclo2"]
+resource_name = "tips_fade_in"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Tips:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ap2x5"]
+resource_name = "tips_fade_out"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Tips:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lrnqr"]
+_data = {
+"RESET": SubResource("Animation_f2w5a"),
+"tips_fade_in": SubResource("Animation_eclo2"),
+"tips_fade_out": SubResource("Animation_ap2x5")
+}
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_avubc")
+
+[node name="UserName" type="Label" parent="."]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 37.0
+offset_right = 93.0
+offset_bottom = 60.0
+theme_override_fonts/font = ExtResource("3_r7kry")
+text = "账号名："
+
+[node name="TextEdit" type="LineEdit" parent="UserName"]
+layout_mode = 0
+offset_left = 59.0
+offset_top = -6.0
+offset_right = 242.0
+offset_bottom = 29.0
+theme = ExtResource("2_5vtul")
+placeholder_text = "_输入用户名"
+max_length = 20
+context_menu_enabled = false
+clear_button_enabled = true
+drag_and_drop_selection_enabled = false
+caret_blink = true
+
+[node name="Password" type="Label" parent="."]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 87.0
+offset_right = 94.0
+offset_bottom = 110.0
+theme_override_fonts/font = ExtResource("3_r7kry")
+text = "密码："
+
+[node name="TextEdit2" type="LineEdit" parent="Password"]
+layout_mode = 0
+offset_left = 59.0
+offset_top = -5.0
+offset_right = 242.0
+offset_bottom = 30.0
+theme = ExtResource("2_5vtul")
+placeholder_text = "_输入密码"
+max_length = 10
+context_menu_enabled = false
+clear_button_enabled = true
+shortcut_keys_enabled = false
+drag_and_drop_selection_enabled = false
+caret_blink = true
+secret = true
+
+[node name="CheckButton" type="CheckButton" parent="Password"]
+layout_mode = 0
+offset_left = 251.0
+offset_right = 295.0
+offset_bottom = 24.0
+
+[node name="Confirm" type="Button" parent="."]
+layout_mode = 0
+offset_left = 123.0
+offset_top = 138.0
+offset_right = 239.0
+offset_bottom = 169.0
+theme_override_fonts/font = ExtResource("3_r7kry")
+text = "登入&快速注册"
+
+[node name="Cancel" type="Button" parent="."]
+layout_mode = 0
+offset_left = 337.0
+offset_top = 6.0
+offset_right = 377.0
+offset_bottom = 37.0
+scale = Vector2(0.72, 0.72)
+theme = ExtResource("2_5vtul")
+icon = SubResource("AtlasTexture_rhrol")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Tips" type="Label" parent="."]
+layout_mode = 0
+offset_left = 85.0
+offset_top = 65.0
+offset_right = 280.0
+offset_bottom = 100.0
+theme = ExtResource("2_5vtul")
+theme_override_fonts/font = ExtResource("3_r7kry")
+label_settings = SubResource("LabelSettings_c3eew")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TipsTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_lrnqr")
+}
+
+[node name="LinkButton" type="LinkButton" parent="."]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 183.0
+offset_right = 548.0
+offset_bottom = 223.0
+theme_override_font_sizes/font_size = 11
+text = "阅读并接受《用户协议》、《儿童个人信息保护声明》及《隐私权保护声明》"
+uri = "https://www.bilibili.com/video/BV1hq4y1s7VH/?spm_id_from=333.337.search-card.all.click"
+
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
+[connection signal="pressed" from="Password/CheckButton" to="." method="_on_check_button_pressed"]
+[connection signal="pressed" from="Confirm" to="." method="_on_confirm_pressed"]
+[connection signal="pressed" from="Cancel" to="." method="_on_cancel_pressed"]
+[connection signal="timeout" from="TipsTimer" to="." method="_on_tips_timer_timeout"]

@@ -1,0 +1,331 @@
+[gd_scene load_steps=9 format=3 uid="uid://65aylxpsxbvj"]
+
+[ext_resource type="Texture2D" uid="uid://daqm1yjpkpk3b" path="res://Avatar/NPC_red.tres" id="1_aundd"]
+[ext_resource type="Script" path="res://Rank.gd" id="1_v2tay"]
+[ext_resource type="Texture2D" uid="uid://qhj66c3dmd3c" path="res://Avatar/NPC_blue.tres" id="1_xw2xl"]
+[ext_resource type="FontFile" uid="uid://dvcuh6hwul41a" path="res://DinkieBitmap-9pxDemo.ttf" id="2_x0u4k"]
+[ext_resource type="Texture2D" uid="uid://bkonv3ibjyp0p" path="res://Avatar/NPC_magenta.tres" id="4_jd77v"]
+[ext_resource type="Theme" uid="uid://cpirkxys4qmoe" path="res://Login.tres" id="6_7sepw"]
+[ext_resource type="Texture2D" uid="uid://cjupt1wx4me5q" path="res://Spritesheet_UI_Flat.png" id="7_3laks"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r4ega"]
+atlas = ExtResource("7_3laks")
+region = Rect2(552, 200, 15, 15)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_v2tay")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -49.0
+offset_top = -82.0
+offset_right = 53.0
+offset_bottom = 76.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.16, 1.16)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_aundd")
+stretch_mode = 2
+
+[node name="Name" type="Label" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_x0u4k")
+theme_override_font_sizes/font_size = 10
+text = "红巫师_23"
+vertical_alignment = 1
+max_lines_visible = 1
+
+[node name="count" type="Label" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_x0u4k")
+theme_override_font_sizes/font_size = 10
+text = "9999"
+vertical_alignment = 1
+max_lines_visible = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("1_aundd")
+stretch_mode = 2
+
+[node name="Name" type="Label" parent="VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_x0u4k")
+theme_override_font_sizes/font_size = 10
+text = "红巫师_09"
+vertical_alignment = 1
+max_lines_visible = 1
+
+[node name="count" type="Label" parent="VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_x0u4k")
+theme_override_font_sizes/font_size = 10
+text = "9999"
+vertical_alignment = 1
+max_lines_visible = 1
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+texture = ExtResource("1_aundd")
+stretch_mode = 2
+
+[node name="Name" type="Label" parent="VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_x0u4k")
+theme_override_font_sizes/font_size = 10
+text = "红巫师_61"
+vertical_alignment = 1
+max_lines_visible = 1
+
+[node name="count" type="Label" parent="VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_x0u4k")
+theme_override_font_sizes/font_size = 10
+text = "9999"
+vertical_alignment = 1
+max_lines_visible = 1
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+texture = ExtResource("4_jd77v")
+stretch_mode = 2
+
+[node name="Name" type="Label" parent="VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_x0u4k")
+theme_override_font_sizes/font_size = 10
+text = "三幻神之首"
+vertical_alignment = 1
+max_lines_visible = 1
+
+[node name="count" type="Label" parent="VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_x0u4k")
+theme_override_font_sizes/font_size = 10
+text = "9999"
+vertical_alignment = 1
+max_lines_visible = 1
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+texture = ExtResource("1_xw2xl")
+stretch_mode = 2
+
+[node name="Name" type="Label" parent="VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_x0u4k")
+theme_override_font_sizes/font_size = 10
+text = "蓝色魔法"
+vertical_alignment = 1
+max_lines_visible = 1
+
+[node name="count" type="Label" parent="VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_x0u4k")
+theme_override_font_sizes/font_size = 10
+text = "9999"
+vertical_alignment = 1
+max_lines_visible = 1
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer6"]
+layout_mode = 2
+texture = ExtResource("1_aundd")
+stretch_mode = 2
+
+[node name="Name" type="Label" parent="VBoxContainer/HBoxContainer6"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_x0u4k")
+theme_override_font_sizes/font_size = 10
+text = "红巫师_11"
+vertical_alignment = 1
+max_lines_visible = 1
+
+[node name="count" type="Label" parent="VBoxContainer/HBoxContainer6"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_x0u4k")
+theme_override_font_sizes/font_size = 10
+text = "9999"
+vertical_alignment = 1
+max_lines_visible = 1
+
+[node name="HBoxContainer7" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer7"]
+layout_mode = 2
+texture = ExtResource("1_aundd")
+stretch_mode = 2
+
+[node name="Name" type="Label" parent="VBoxContainer/HBoxContainer7"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_x0u4k")
+theme_override_font_sizes/font_size = 10
+text = "骑士精神"
+vertical_alignment = 1
+max_lines_visible = 1
+
+[node name="count" type="Label" parent="VBoxContainer/HBoxContainer7"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_x0u4k")
+theme_override_font_sizes/font_size = 10
+text = "9999"
+vertical_alignment = 1
+max_lines_visible = 1
+
+[node name="HBoxContainer8" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer8"]
+layout_mode = 2
+texture = ExtResource("4_jd77v")
+stretch_mode = 2
+
+[node name="Name" type="Label" parent="VBoxContainer/HBoxContainer8"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_x0u4k")
+theme_override_font_sizes/font_size = 10
+text = "紫色闪电"
+vertical_alignment = 1
+max_lines_visible = 1
+
+[node name="count" type="Label" parent="VBoxContainer/HBoxContainer8"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_x0u4k")
+theme_override_font_sizes/font_size = 10
+text = "9999"
+vertical_alignment = 1
+max_lines_visible = 1
+
+[node name="HBoxContainer9" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer9"]
+layout_mode = 2
+texture = ExtResource("1_xw2xl")
+stretch_mode = 2
+
+[node name="Name" type="Label" parent="VBoxContainer/HBoxContainer9"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_x0u4k")
+theme_override_font_sizes/font_size = 10
+text = "蓝色魔法"
+vertical_alignment = 1
+max_lines_visible = 1
+
+[node name="count" type="Label" parent="VBoxContainer/HBoxContainer9"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_x0u4k")
+theme_override_font_sizes/font_size = 10
+text = "9999"
+vertical_alignment = 1
+max_lines_visible = 1
+
+[node name="HBoxContainer10" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer10"]
+layout_mode = 2
+texture = ExtResource("4_jd77v")
+stretch_mode = 2
+
+[node name="Name" type="Label" parent="VBoxContainer/HBoxContainer10"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_x0u4k")
+theme_override_font_sizes/font_size = 10
+text = "紫之流星"
+vertical_alignment = 1
+max_lines_visible = 1
+
+[node name="count" type="Label" parent="VBoxContainer/HBoxContainer10"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_x0u4k")
+theme_override_font_sizes/font_size = 10
+text = "9999"
+vertical_alignment = 1
+max_lines_visible = 1
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 146.0
+offset_top = 3.0
+offset_right = 186.0
+offset_bottom = 26.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_x0u4k")
+theme_override_font_sizes/font_size = 16
+text = "玩家"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 224.0
+offset_top = 3.0
+offset_right = 272.0
+offset_bottom = 26.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_x0u4k")
+theme_override_font_sizes/font_size = 16
+text = "召唤数"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Cancel" type="Button" parent="."]
+offset_left = 337.0
+offset_top = 6.0
+offset_right = 377.0
+offset_bottom = 37.0
+scale = Vector2(0.72, 0.72)
+theme = ExtResource("6_7sepw")
+icon = SubResource("AtlasTexture_r4ega")
+icon_alignment = 1
+expand_icon = true
+
+[connection signal="pressed" from="Cancel" to="." method="_on_cancel_pressed"]

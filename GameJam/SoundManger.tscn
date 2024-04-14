@@ -1,0 +1,40 @@
+[gd_scene load_steps=8 format=3 uid="uid://cd64g4rdq6njd"]
+
+[ext_resource type="Script" path="res://SoundManger.gd" id="1_7idwo"]
+[ext_resource type="AudioStream" uid="uid://bfexanhx1lbtf" path="res://SFX/cat1a.mp3" id="2_e2b7j"]
+[ext_resource type="AudioStream" uid="uid://b1efbupt8h1bw" path="res://SFX/cat1b.mp3" id="3_wd4m6"]
+[ext_resource type="AudioStream" uid="uid://b2l2jli71trvc" path="res://SFX/cat2a.mp3" id="4_qw5c0"]
+[ext_resource type="AudioStream" uid="uid://xfa7npdootvy" path="res://SFX/cat3b.mp3" id="5_1hcf0"]
+[ext_resource type="AudioStream" uid="uid://c0hcetf7spss6" path="res://SFX/cat3a.mp3" id="5_8xnph"]
+[ext_resource type="AudioStream" uid="uid://dkcht3cds08xa" path="res://SFX/cats_fighting.mp3" id="7_0s14s"]
+
+[node name="SoundManger" type="Node"]
+script = ExtResource("1_7idwo")
+
+[node name="SFX" type="Node" parent="."]
+
+[node name="cat1" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("2_e2b7j")
+volume_db = -25.0
+
+[node name="cat2" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("3_wd4m6")
+volume_db = -20.0
+
+[node name="cat3" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("4_qw5c0")
+volume_db = -15.0
+
+[node name="cat4" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("5_8xnph")
+volume_db = -25.0
+
+[node name="cat5" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("5_1hcf0")
+volume_db = -15.0
+
+[node name="BGM" type="Node" parent="."]
+
+[node name="cat1" type="AudioStreamPlayer" parent="BGM"]
+stream = ExtResource("7_0s14s")
+volume_db = -10.0

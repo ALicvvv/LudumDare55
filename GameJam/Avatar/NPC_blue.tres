@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://qhj66c3dmd3c"]
+
+[ext_resource type="Texture2D" uid="uid://dej4wexs4dfo0" path="res://mage_guardian-blue.png" id="1_cc1u6"]
+
+[resource]
+atlas = ExtResource("1_cc1u6")
+region = Rect2(411, 1, 10, 11)
